@@ -2,56 +2,56 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="shape.shape.ShapeTest" duration-ms="396" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+  <suite name="shape.shape.ShapeTest" duration-ms="469" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="396" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+    <test name="Command line test" duration-ms="469" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
       <class name="shape.shape.ShapeTest">
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="326" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="352" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="attemptToCreateShapeTooLarger()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="attemptToCreateShapeTooLarger" duration-ms="3" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="attemptToCreateShapeTooLarger()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="attemptToCreateShapeTooLarger" duration-ms="3" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attemptToCreateShapeTooLarger -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="attemptToCreateShapeTooSmall()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="attemptToCreateShapeTooSmall" duration-ms="0" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="attemptToCreateShapeTooSmall()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="attemptToCreateShapeTooSmall" duration-ms="0" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attemptToCreateShapeTooSmall -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="createCustomSizedShape()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="createCustomSizedShape" duration-ms="5" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="createCustomSizedShape()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="createCustomSizedShape" duration-ms="1" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCustomSizedShape -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="createDefaultShape()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="createDefaultShape" duration-ms="0" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="createDefaultShape()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="createDefaultShape" duration-ms="0" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDefaultShape -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="createLargestAllowedShape()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="createLargestAllowedShape" duration-ms="4" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="createLargestAllowedShape()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="createLargestAllowedShape" duration-ms="6" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createLargestAllowedShape -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="createSmallestAllowedShape()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="createSmallestAllowedShape" duration-ms="0" started-at="2019-01-08T03:58:36Z" finished-at="2019-01-08T03:58:36Z">
+        <test-method status="PASS" signature="createSmallestAllowedShape()[pri:0, instance:shape.shape.ShapeTest@880ec60]" name="createSmallestAllowedShape" duration-ms="0" started-at="2019-01-08T04:32:56Z" finished-at="2019-01-08T04:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createSmallestAllowedShape -->

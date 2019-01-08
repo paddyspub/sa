@@ -245,17 +245,17 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createCustomSizedShape')
+data.setCell(0, 1, 'createLargestAllowedShape')
 data.setCell(0, 2, 'shape.shape.ShapeTest')
-data.setCell(0, 3, 5);
+data.setCell(0, 3, 6);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createLargestAllowedShape')
+data.setCell(1, 1, 'attemptToCreateShapeTooLarger')
 data.setCell(1, 2, 'shape.shape.ShapeTest')
-data.setCell(1, 3, 4);
+data.setCell(1, 3, 3);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'attemptToCreateShapeTooLarger')
+data.setCell(2, 1, 'createCustomSizedShape')
 data.setCell(2, 2, 'shape.shape.ShapeTest')
-data.setCell(2, 3, 3);
+data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'attemptToCreateShapeTooSmall')
 data.setCell(3, 2, 'shape.shape.ShapeTest')
@@ -272,7 +272,7 @@ window.suiteTableData['shape.shape.ShapeTest']= { tableData: data, tableDiv: 'ti
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 ms</span>
+              <span class="suite-total-time">Total running time: 10 ms</span>
               <div id="times-div-shape.shape.ShapeTest">
               </div> <!-- times-div-shape.shape.ShapeTest -->
             </div> <!-- times-div -->
@@ -305,47 +305,47 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">attemptToCreateShapeTooLarger</span>
-                <span class="method-start">326 ms</span>
+                <span class="method-start">352 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">331 ms</span>
+                <span class="method-start">356 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">attemptToCreateShapeTooSmall</span>
-                <span class="method-start">332 ms</span>
+                <span class="method-start">357 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">333 ms</span>
+                <span class="method-start">357 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createCustomSizedShape</span>
-                <span class="method-start">333 ms</span>
+                <span class="method-start">358 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">344 ms</span>
+                <span class="method-start">360 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createDefaultShape</span>
-                <span class="method-start">345 ms</span>
+                <span class="method-start">361 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">348 ms</span>
+                <span class="method-start">365 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createLargestAllowedShape</span>
-                <span class="method-start">349 ms</span>
+                <span class="method-start">365 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">354 ms</span>
+                <span class="method-start">371 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createSmallestAllowedShape</span>
-                <span class="method-start">355 ms</span>
+                <span class="method-start">372 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
