@@ -51,27 +51,52 @@ public class HashNoCrash {
 
     // Take in the key, hash it, see if there is a bucket for it, if so find it in that buckets array list and return
     // the object, if not in that buckets array list return null. If no bucket for that hash exists, return null
-    private Object get(String key) {
-        long hash = hash(key);
-        for (Long bucket : buckets) {
-            if (bucket == hash) ;
-            // search for it in the array list, return it or return null if its not in the array list
+    private HashEntry get(String key) {
+        int hash = hash(key);
+
+        // Get the bucket at the index of hash
+        Bucket bucket = buckets.get(hash);
+        // Search the collision list at the hash bucket
+        if (bucket != null) {
+            // search the collision list for the key
+            Optional<HashEntry> hashEntryOptional = bucket.getHashEntries().stream().filter(hashEntry -> hashEntry.getKey().equals(key)).findFirst();
+            // if there is an entry for the key in the collision map, return the hash entry
+            if (hashEntryOptional.isPresent()) {
+                return hashEntryOptional.get();
+            } else {
+                // nothing in the collision map, return null
+                return null;
+            }
+        } else {
+            // No bucket for this hash, return null
+            return null;
         }
-        // wasnt in a bucket, couldnt be in the hash
-        return null;
     }
 
     // Take in the key, hash it, see if there is a bucket for it, if so find it in that buckets array list and delete
     // the object, if not in that buckets array list return null. If no bucket for that hash exists, return null
     private boolean delete(String key) {
-        long hash = hash(key);
-        for (Long bucket : buckets) {
-            if (bucket == hash) ;
-            // search for it in the array list, return it or return null if its not in the array list
-            return true;
+        int hash = hash(key);
+
+        // Get the bucket at the index of hash
+        Bucket bucket = buckets.get(hash);
+        // Search the collision list at the hash bucket
+        if (bucket != null) {
+            // search the collision and remove the hash entry
+            Iterator<HashEntry> hashEntryIterator = bucket.getHashEntries().iterator();
+            while (hashEntryIterator.hasNext()) {
+                // if there is an entry for the key in the collision map, return the hash entry and return true
+                if (hashEntryIterator.next().getKey().equals(key)) {
+                    hashEntryIterator.remove();
+                    return true;
+                }
+            }
+            // nothing deleted from the collision map, return false
+            return false;
+        } else {
+            // No bucket for this hash, nothing was deleted
+            return false;
         }
-        // wasnt in a bucket, couldnt be in the hash
-        return false;
     }
 
     // Take in the key, hash it, see if there is a bucket for it, if so find it in that buckets array list and return
