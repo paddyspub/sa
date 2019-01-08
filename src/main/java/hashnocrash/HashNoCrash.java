@@ -16,8 +16,8 @@ public class HashNoCrash {
     //
     // 1 billion buckets will be created by bitwise XORing the ascii values of each character
     public int hash(String key) {
-        int hash = 0;
-        for (int i = 0; i < key.length(); ++i) {
+        int hash = (int) key.charAt(1);
+        for (int i = 1; i < key.length(); ++i) {
             hash ^= (int) key.charAt(i);
         }
         return hash % ONE_BILLION;
@@ -25,7 +25,11 @@ public class HashNoCrash {
 
     // given a key, hash it, search for the hash in the list of buckets, if found add it to that bucket's
     // array list, else if that bucket doesnt exist, add it
-    private boolean put(String key, Object value) {
+    private boolean put(String key, Object value) throws Exception {
+        // make sure the key is the correct length and consists only of 0-9a-zA-Z
+        if (key.length() < 1 || key.length() > 8) {
+            throw new Exception("Key must be 1-8 characters");
+        }
         int hash = hash(key);
 
         // Get the bucket at the index of hash
@@ -51,7 +55,12 @@ public class HashNoCrash {
 
     // Take in the key, hash it, see if there is a bucket for it, if so find it in that buckets array list and return
     // the object, if not in that buckets array list return null. If no bucket for that hash exists, return null
-    private HashEntry get(String key) {
+    private HashEntry get(String key)
+            throws Exception {
+        // make sure the key is the correct length and consists only of 0-9a-zA-Z
+        if (key.length() < 1 || key.length() > 8) {
+            throw new Exception("Key must be 1-8 characters");
+        }
         int hash = hash(key);
 
         // Get the bucket at the index of hash
@@ -71,7 +80,11 @@ public class HashNoCrash {
 
     // Take in the key, hash it, see if there is a bucket for it, if so find it in that buckets array list and return
     // true. If not in that buckets array list return false. If no bucket for that hash exists, return false
-    private boolean containsKey(String key) {
+    private boolean containsKey(String key) throws Exception {
+        // make sure the key is the correct length and consists only of 0-9a-zA-Z
+        if (key.length() < 1 || key.length() > 8) {
+            throw new Exception("Key must be 1-8 characters");
+        }
 
         int hash = hash(key);
 
@@ -92,7 +105,11 @@ public class HashNoCrash {
 
     // Take in the key, hash it, see if there is a bucket for it, if so find it in that buckets array list and delete
     // the object, if not in that buckets array list return null. If no bucket for that hash exists, return null
-    private boolean delete(String key) {
+    private boolean delete(String key) throws Exception {
+        // make sure the key is the correct length and consists only of 0-9a-zA-Z
+        if (key.length() < 1 || key.length() > 8) {
+            throw new Exception("Key must be 1-8 characters");
+        }
         int hash = hash(key);
 
         // Get the bucket at the index of hash
