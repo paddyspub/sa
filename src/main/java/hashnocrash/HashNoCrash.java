@@ -63,14 +63,31 @@ public class HashNoCrash {
             // if there is an entry for the key in the collision map, return the hash entry
             if (hashEntryOptional.isPresent()) {
                 return hashEntryOptional.get();
-            } else {
-                // nothing in the collision map, return null
-                return null;
             }
-        } else {
-            // No bucket for this hash, return null
-            return null;
         }
+        // nothing in the collision map or no bucket for this hash, return null
+        return null;
+    }
+
+    // Take in the key, hash it, see if there is a bucket for it, if so find it in that buckets array list and return
+    // true. If not in that buckets array list return false. If no bucket for that hash exists, return false
+    private boolean containsKey(String key) {
+
+        int hash = hash(key);
+
+        // Get the bucket at the index of hash
+        Bucket bucket = buckets.get(hash);
+        // Search the collision list at the hash bucket
+        if (bucket != null) {
+            // search the collision and remove the hash entry
+            Optional<HashEntry> hashEntryOptional = bucket.getHashEntries().stream().filter(hashEntry -> hashEntry.getKey().equals(key)).findFirst();
+            // if there is an entry for the key in the collision map, return the hash entry
+            if (hashEntryOptional.isPresent()) {
+                return true;
+            }
+        }
+        //nothing in the collision map or no bucket for this hash, nothing was deleted
+        return false;
     }
 
     // Take in the key, hash it, see if there is a bucket for it, if so find it in that buckets array list and delete
@@ -91,24 +108,8 @@ public class HashNoCrash {
                     return true;
                 }
             }
-            // nothing deleted from the collision map, return false
-            return false;
-        } else {
-            // No bucket for this hash, nothing was deleted
-            return false;
         }
-    }
-
-    // Take in the key, hash it, see if there is a bucket for it, if so find it in that buckets array list and return
-    // true. If not in that buckets array list return false. If no bucket for that hash exists, return false
-    private boolean containsKey(String key) {
-        long hash = hash(key);
-        for (Long bucket : buckets) {
-            if (bucket == hash) ;
-            // search for it in the array list, return it or return null if its not in the array list
-            return true;
-        }
-        // wasnt in a bucket, couldnt be in the hash
+        // nothing deleted from the collision map or No bucket for this hash, nothing was deleted
         return false;
     }
 }
