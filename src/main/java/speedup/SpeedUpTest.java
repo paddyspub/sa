@@ -11,14 +11,15 @@ package speedup;
 
  ***************************************************************/
 public class SpeedUpTest {
-
-    public static final Integer MAX = 2147483647;
+    // use a primitive int instead of Integer, no need for an Integer object in this class
+    public static final int MAX = 2147483647;
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
 
-
-        for (Integer i = 0; i < MAX; i++) {
+        // use the primitive int so you dont have the overhead of creating an Integer object and doing
+        // comparison to an Integer object for MAX, which has also been changed to the primitive int
+        for (int i = 0; i < MAX; i++) {
         }
 
         long endTime = System.currentTimeMillis();
