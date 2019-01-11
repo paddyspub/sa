@@ -1,7 +1,10 @@
 garagedoor/GarageDoorFSM$State.class
 directory/FileSearch.class
 anagram/Anagram.class
+hashnocrash/HashNoCrash.class
 garagedoor/GarageDoorFSM.class
 speedup/SpeedUpTest.class
+hashnocrash/Bucket.class
 anagram/AnagramInterface.class
+hashnocrash/HashEntry.class
 shape/Shape.class
