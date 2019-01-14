@@ -138,7 +138,7 @@ public class HashNoCrash {
             throw new Exception("Key must be 1-8 characters");
         }
         int hash = hash(key);
-        Map<Integer, String> hashMap = new HashMap<>();
+
         // Get the bucket at the index of hash
         if (hash < buckets.size()) {
             Bucket bucket = buckets.get(hash);
@@ -155,7 +155,7 @@ public class HashNoCrash {
                 }
             }
         }
-        
+
         // nothing deleted from the collision map or No bucket for this hash, nothing was deleted
         return false;
     }
