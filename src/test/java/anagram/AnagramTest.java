@@ -5,7 +5,6 @@ import org.mockito.MockitoAnnotations;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import anagram.Anagram;
 
 @Test
 public class AnagramTest {

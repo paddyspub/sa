@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">12 methods,   12 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -138,6 +138,16 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="hashnocrash.HashNoCrashTest" hash-for-method="testHashFuntionality">testHashFuntionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="directory.FileSearchTest" hash-for-method="testSearchForFilesByExtention">testSearchForFilesByExtention</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="directory.FileSearchTest" hash-for-method="testSearchForFilesByNames">testSearchForFilesByNames</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -209,6 +219,28 @@
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">directory.FileSearchTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchForFilesByExtention">
+                  </a> <!-- testSearchForFilesByExtention -->
+                  <span class="method-name">testSearchForFilesByExtention</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchForFilesByNames">
+                  </a> <!-- testSearchForFilesByNames -->
+                  <span class="method-name">testSearchForFilesByNames</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">shape.shape.ShapeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -269,6 +301,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;shape.shape.ShapeTest&quot;/&gt;
       &lt;class name=&quot;anagram.AnagramTest&quot;/&gt;
+      &lt;class name=&quot;directory.FileSearchTest&quot;/&gt;
       &lt;class name=&quot;hashnocrash.HashNoCrashTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Command line test --&gt;
@@ -283,7 +316,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Command line test (3 classes)</span>
+                <span class="test-name">Command line test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -309,52 +342,60 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testHashFuntionality')
-data.setCell(0, 2, 'hashnocrash.HashNoCrashTest')
-data.setCell(0, 3, 3438);
+data.setCell(0, 1, 'testSearchForFilesByExtention')
+data.setCell(0, 2, 'directory.FileSearchTest')
+data.setCell(0, 3, 122);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createSmallestAllowedShape')
-data.setCell(1, 2, 'shape.shape.ShapeTest')
-data.setCell(1, 3, 6);
+data.setCell(1, 1, 'testHashFuntionality')
+data.setCell(1, 2, 'hashnocrash.HashNoCrashTest')
+data.setCell(1, 3, 9);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'createLargestAllowedShape')
 data.setCell(2, 2, 'shape.shape.ShapeTest')
-data.setCell(2, 3, 5);
+data.setCell(2, 3, 8);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'createCustomSizedShape')
-data.setCell(3, 2, 'shape.shape.ShapeTest')
-data.setCell(3, 3, 5);
+data.setCell(3, 1, 'testSearchForFilesByNames')
+data.setCell(3, 2, 'directory.FileSearchTest')
+data.setCell(3, 3, 4);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'attemptToCreateShapeTooLarger')
+data.setCell(4, 1, 'createCustomSizedShape')
 data.setCell(4, 2, 'shape.shape.ShapeTest')
-data.setCell(4, 3, 2);
+data.setCell(4, 3, 4);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testValidAnagram')
-data.setCell(5, 2, 'anagram.AnagramTest')
-data.setCell(5, 3, 1);
+data.setCell(5, 1, 'attemptToCreateShapeTooLarger')
+data.setCell(5, 2, 'shape.shape.ShapeTest')
+data.setCell(5, 3, 3);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'createDefaultShape')
 data.setCell(6, 2, 'shape.shape.ShapeTest')
-data.setCell(6, 3, 1);
+data.setCell(6, 3, 2);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testValidNonAnagrams')
+data.setCell(7, 1, 'testValidAnagram')
 data.setCell(7, 2, 'anagram.AnagramTest')
-data.setCell(7, 3, 0);
+data.setCell(7, 3, 1);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testExceptions')
-data.setCell(8, 2, 'hashnocrash.HashNoCrashTest')
-data.setCell(8, 3, 0);
+data.setCell(8, 1, 'testValidNonAnagrams')
+data.setCell(8, 2, 'anagram.AnagramTest')
+data.setCell(8, 3, 1);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'attemptToCreateShapeTooSmall')
+data.setCell(9, 1, 'createSmallestAllowedShape')
 data.setCell(9, 2, 'shape.shape.ShapeTest')
-data.setCell(9, 3, 0);
+data.setCell(9, 3, 1);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'attemptToCreateShapeTooSmall')
+data.setCell(10, 2, 'shape.shape.ShapeTest')
+data.setCell(10, 3, 0);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testExceptions')
+data.setCell(11, 2, 'hashnocrash.HashNoCrashTest')
+data.setCell(11, 3, 0);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 155 ms</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -387,85 +428,104 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">attemptToCreateShapeTooLarger</span>
-                <span class="method-start">219 ms</span>
+                <span class="method-start">264 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">222 ms</span>
+                <span class="method-start">269 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">attemptToCreateShapeTooSmall</span>
-                <span class="method-start">223 ms</span>
+                <span class="method-start">270 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">224 ms</span>
+                <span class="method-start">271 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createCustomSizedShape</span>
-                <span class="method-start">224 ms</span>
+                <span class="method-start">271 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">231 ms</span>
+                <span class="method-start">276 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createDefaultShape</span>
-                <span class="method-start">231 ms</span>
+                <span class="method-start">277 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">234 ms</span>
+                <span class="method-start">280 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createLargestAllowedShape</span>
-                <span class="method-start">236 ms</span>
+                <span class="method-start">280 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">242 ms</span>
+                <span class="method-start">299 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createSmallestAllowedShape</span>
-                <span class="method-start">242 ms</span>
+                <span class="method-start">299 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">anagram.AnagramTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">250 ms</span>
+                <span class="method-start">303 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testValidAnagram</span>
-                <span class="method-start">250 ms</span>
+                <span class="method-start">304 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">251 ms</span>
+                <span class="method-start">306 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testValidNonAnagrams</span>
-                <span class="method-start">252 ms</span>
+                <span class="method-start">307 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">directory.FileSearchTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initMocks</span>
+                <span class="method-start">312 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchForFilesByExtention</span>
+                <span class="method-start">313 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initMocks</span>
+                <span class="method-start">436 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchForFilesByNames</span>
+                <span class="method-start">436 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">hashnocrash.HashNoCrashTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">253 ms</span>
+                <span class="method-start">441 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testExceptions</span>
-                <span class="method-start">255 ms</span>
+                <span class="method-start">442 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">initMocks</span>
-                <span class="method-start">255 ms</span>
+                <span class="method-start">443 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testHashFuntionality</span>
-                <span class="method-start">256 ms</span>
+                <span class="method-start">443 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

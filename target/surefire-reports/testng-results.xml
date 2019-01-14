@@ -1,93 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="3731" started-at="2019-01-14T01:40:09Z" finished-at="2019-01-14T01:40:13Z">
+  <suite name="Command line suite" duration-ms="489" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="3731" started-at="2019-01-14T01:40:09Z" finished-at="2019-01-14T01:40:13Z">
+    <test name="Command line test" duration-ms="489" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
       <class name="anagram.AnagramTest">
-        <test-method status="PASS" signature="testValidAnagram()[pri:0, instance:anagram.AnagramTest@511baa65]" name="testValidAnagram" duration-ms="1" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:anagram.AnagramTest@340f438e]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initMocks -->
+        <test-method status="PASS" signature="testValidAnagram()[pri:0, instance:anagram.AnagramTest@340f438e]" name="testValidAnagram" duration-ms="1" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidAnagram -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:anagram.AnagramTest@511baa65]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:anagram.AnagramTest@340f438e]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:anagram.AnagramTest@511baa65]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="testValidNonAnagrams()[pri:0, instance:anagram.AnagramTest@511baa65]" name="testValidNonAnagrams" duration-ms="0" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="testValidNonAnagrams()[pri:0, instance:anagram.AnagramTest@340f438e]" name="testValidNonAnagrams" duration-ms="1" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidNonAnagrams -->
       </class> <!-- anagram.AnagramTest -->
       <class name="hashnocrash.HashNoCrashTest">
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:hashnocrash.HashNoCrashTest@340f438e]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:hashnocrash.HashNoCrashTest@5b464ce8]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="testExceptions()[pri:0, instance:hashnocrash.HashNoCrashTest@340f438e]" name="testExceptions" duration-ms="0" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="testExceptions()[pri:0, instance:hashnocrash.HashNoCrashTest@5b464ce8]" name="testExceptions" duration-ms="0" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExceptions -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:hashnocrash.HashNoCrashTest@340f438e]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="testHashFuntionality()[pri:0, instance:hashnocrash.HashNoCrashTest@340f438e]" name="testHashFuntionality" duration-ms="3438" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:13Z">
+        <test-method status="PASS" signature="testHashFuntionality()[pri:0, instance:hashnocrash.HashNoCrashTest@5b464ce8]" name="testHashFuntionality" duration-ms="9" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHashFuntionality -->
-      </class> <!-- hashnocrash.HashNoCrashTest -->
-      <class name="shape.shape.ShapeTest">
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="initMocks" is-config="true" duration-ms="219" started-at="2019-01-14T01:40:09Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:hashnocrash.HashNoCrashTest@5b464ce8]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="attemptToCreateShapeTooLarger()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="attemptToCreateShapeTooLarger" duration-ms="2" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+      </class> <!-- hashnocrash.HashNoCrashTest -->
+      <class name="directory.FileSearchTest">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:directory.FileSearchTest@30c7da1e]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initMocks -->
+        <test-method status="PASS" signature="testSearchForFilesByExtention()[pri:0, instance:directory.FileSearchTest@30c7da1e]" name="testSearchForFilesByExtention" duration-ms="122" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchForFilesByExtention -->
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:directory.FileSearchTest@30c7da1e]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initMocks -->
+        <test-method status="PASS" signature="testSearchForFilesByNames()[pri:0, instance:directory.FileSearchTest@30c7da1e]" name="testSearchForFilesByNames" duration-ms="4" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchForFilesByNames -->
+      </class> <!-- directory.FileSearchTest -->
+      <class name="shape.shape.ShapeTest">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="initMocks" is-config="true" duration-ms="264" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initMocks -->
+        <test-method status="PASS" signature="attemptToCreateShapeTooLarger()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="attemptToCreateShapeTooLarger" duration-ms="3" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attemptToCreateShapeTooLarger -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="attemptToCreateShapeTooSmall()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="attemptToCreateShapeTooSmall" duration-ms="0" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="attemptToCreateShapeTooSmall()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="attemptToCreateShapeTooSmall" duration-ms="0" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attemptToCreateShapeTooSmall -->
-        <test-method status="PASS" signature="createCustomSizedShape()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="createCustomSizedShape" duration-ms="5" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initMocks -->
+        <test-method status="PASS" signature="createCustomSizedShape()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="createCustomSizedShape" duration-ms="4" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCustomSizedShape -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="initMocks" is-config="true" duration-ms="1" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="createDefaultShape()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="createDefaultShape" duration-ms="1" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="createDefaultShape()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="createDefaultShape" duration-ms="2" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDefaultShape -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="initMocks" is-config="true" duration-ms="2" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="createLargestAllowedShape()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="createLargestAllowedShape" duration-ms="5" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="createLargestAllowedShape()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="createLargestAllowedShape" duration-ms="8" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createLargestAllowedShape -->
-        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="initMocks()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="initMocks" is-config="true" duration-ms="0" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMocks -->
-        <test-method status="PASS" signature="createSmallestAllowedShape()[pri:0, instance:shape.shape.ShapeTest@39ba5a14]" name="createSmallestAllowedShape" duration-ms="6" started-at="2019-01-14T01:40:10Z" finished-at="2019-01-14T01:40:10Z">
+        <test-method status="PASS" signature="createSmallestAllowedShape()[pri:0, instance:shape.shape.ShapeTest@511baa65]" name="createSmallestAllowedShape" duration-ms="1" started-at="2019-01-14T02:56:37Z" finished-at="2019-01-14T02:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createSmallestAllowedShape -->
