@@ -125,7 +125,7 @@ public class HashNoCrash {
 
     // Take in the key, hash it, see if there is a bucket for it, if so find it in that buckets array list and delete
     // the object, if not in that buckets array list return null. If no bucket for that hash exists, return null
-    private boolean delete(String key) throws Exception {
+    public boolean delete(String key) throws Exception {
         // make sure the key is the correct length and consists only of 0-9a-zA-Z
         if (key.length() < 1 || key.length() > 8) {
             throw new Exception("Key must be 1-8 characters");
