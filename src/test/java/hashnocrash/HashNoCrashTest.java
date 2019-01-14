@@ -14,7 +14,7 @@ import java.util.List;
 public class HashNoCrashTest {
 
     @InjectMocks
-    private HashNoCrash hashNoCrash = new HashNoCrash(4);
+    private HashNoCrash hashNoCrash = new HashNoCrash();
 
     @BeforeMethod(alwaysRun = true)
     public void initMocks() {
@@ -45,6 +45,8 @@ public class HashNoCrashTest {
 
         Assert.assertEquals(hashNoCrash.put("CC", "TEST NEW C"), true);
         Assert.assertEquals(hashNoCrash.containsKey("CC"), true);
+        Assert.assertEquals(hashNoCrash.put("ZZZZZZZZ", "TEST Largest"), true);
+
 
     }
 }

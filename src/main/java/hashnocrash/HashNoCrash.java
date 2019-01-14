@@ -1,24 +1,19 @@
 package hashnocrash;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class HashNoCrash {
-    private static final int ONE_BILLION = 1000000000;
+    private static final int NUM_BUCKETS = 1000000000;
+    private static final double LOAD_FACTOR = 1.0; // can decrease this with a smaller
     private static List<Bucket> buckets;
     private int numBuckets;
+
     public HashNoCrash() {
         buckets = new ArrayList<>();
         buckets.add(0, null);
-        numBuckets = ONE_BILLION;
+        numBuckets = NUM_BUCKETS;
     }
-    public HashNoCrash(int numBuckets) {
-        buckets = new ArrayList<>();
-        buckets.add(0, null);
-        this.numBuckets = numBuckets;
-    }
+
 
     // This hash will take 1-8 chars and then sum the ascii values of them to create buckets.
     // There are up to 8 characters of 0-9a-zA-AZ for the key which is (10 + 26 + 26) ^ 8 which is
@@ -27,12 +22,29 @@ public class HashNoCrash {
     //
     // 1 billion buckets will be created by bitwise XORing the ascii values of each character
     private int hash(String key) {
-        int hash = 1;
+        int hash = 3;
         for (int i = 0; i < key.length(); i++) {
-            hash = hash* 11 + key.charAt(i);
+            hash = hash * 7 + key.charAt(i);
         }
 
-        return hash % numBuckets;
+        return (hash % numBuckets) % NUM_BUCKETS;
+    }
+
+    // Increases the number of buckets by a load factor of .70 to increase capacity of the bucky array
+    private void handleCapacityByLoadFactor(int hash) {
+        if (hash >= (buckets.size())) {
+
+            long newSize = (long) Math.ceil((hash / LOAD_FACTOR));
+            // calculate the buckets to add. Always add 1 (o(1) still, but also safe)
+            long numberOfNewItemsToAdd = (newSize - buckets.size());
+            System.out.println(hash - numberOfNewItemsToAdd);
+            while (numberOfNewItemsToAdd-- > 0 && buckets.size() <= NUM_BUCKETS) {
+                buckets.add(null);
+            }
+            System.out.println(buckets.size());
+
+        }
+
     }
 
     // given a key, hash it, search for the hash in the list of buckets, if found add it to that bucket's
@@ -60,12 +72,7 @@ public class HashNoCrash {
         } else {
             // add the new bucket at the index of hash
             List<HashEntry> newBucketHashEntriesList = new ArrayList<>();
-            if (hash >= buckets.size()) {
-                int numberOfNewItemsToAdd = hash - buckets.size();
-                while (numberOfNewItemsToAdd-- > 0) {
-                    buckets.add(null);
-                }
-            }
+            handleCapacityByLoadFactor(hash);
             HashEntry hashEntry = new HashEntry(key, value);
             newBucketHashEntriesList.add(hashEntry);
             buckets.add(hash, new Bucket(hash, newBucketHashEntriesList));
@@ -131,24 +138,27 @@ public class HashNoCrash {
             throw new Exception("Key must be 1-8 characters");
         }
         int hash = hash(key);
-
+        Map<Integer, String> hashMap = new HashMap<>();
         // Get the bucket at the index of hash
-        Bucket bucket = buckets.get(hash);
-        // Search the collision list at the hash bucket
-        if (bucket != null) {
-            // search the collision and remove the hash entry
-            Iterator<HashEntry> hashEntryIterator = bucket.getHashEntries().iterator();
-            while (hashEntryIterator.hasNext()) {
-                // if there is an entry for the key in the collision map, return the hash entry and return true
-                if (hashEntryIterator.next().getKey().equals(key)) {
-                    hashEntryIterator.remove();
-                    return true;
+        if (hash < buckets.size()) {
+            Bucket bucket = buckets.get(hash);
+            // Search the collision list at the hash bucket
+            if (bucket != null) {
+                // search the collision and remove the hash entry
+                Iterator<HashEntry> hashEntryIterator = bucket.getHashEntries().iterator();
+                while (hashEntryIterator.hasNext()) {
+                    // if there is an entry for the key in the collision map, return the hash entry and return true
+                    if (hashEntryIterator.next().getKey().equals(key)) {
+                        hashEntryIterator.remove();
+                        return true;
+                    }
                 }
             }
         }
         // nothing deleted from the collision map or No bucket for this hash, nothing was deleted
         return false;
     }
+
     public int getNumBuckets() {
         return buckets.size();
     }
