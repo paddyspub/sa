@@ -66,6 +66,8 @@ public class HashNoCrash {
                     buckets.add(null);
                 }
             }
+            HashEntry hashEntry = new HashEntry(key, value);
+            newBucketHashEntriesList.add(hashEntry);
             buckets.add(hash, new Bucket(hash, newBucketHashEntriesList));
         }
         return true;
@@ -89,7 +91,7 @@ public class HashNoCrash {
             Optional<HashEntry> hashEntryOptional = bucket.getHashEntries().stream().filter(hashEntry -> hashEntry.getKey().equals(key)).findFirst();
             // if there is an entry for the key in the collision map, return the hash entry
             if (hashEntryOptional.isPresent()) {
-                return hashEntryOptional.get();
+                return hashEntryOptional.get().getValue();
             }
         }
         // nothing in the collision map or no bucket for this hash, return null
