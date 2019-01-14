@@ -45,8 +45,22 @@ public class HashNoCrashTest {
 
         Assert.assertEquals(hashNoCrash.put("CC", "TEST NEW C"), true);
         Assert.assertEquals(hashNoCrash.containsKey("CC"), true);
-        Assert.assertEquals(hashNoCrash.put("ZZZZZZZZ", "TEST Largest"), true);
+        Assert.assertEquals(hashNoCrash.put("ZZZZZZZZ", "TEST key the produces largest hash"), true);
+    }
 
-
+    @Test
+    public void testExceptions () {
+        try {
+            hashNoCrash.put("", 1);
+        }
+        catch (Exception e) {
+            Assert.assertEquals (e.getMessage(), "Key must be 1-8 characters");
+        }
+        try {
+            hashNoCrash.put("123456789", 1);
+        }
+        catch (Exception e) {
+            Assert.assertEquals (e.getMessage(), "Key must be 1-8 characters");
+        }
     }
 }
