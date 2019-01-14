@@ -8,30 +8,35 @@ package garagedoor;
  ***************************************************************/
 public class GarageDoorFSM {
     public enum State {
-        CLOSED, OPENED, CLOSING, OPENING, ERROR
+        CLOSED, OPENED
     }
 
-    private static State currentState = State.CLOSED;
-    public static void init () {
+    private State currentState = State.CLOSED;
+
+    public GarageDoorFSM() {
+    }
+
+    public State getCurrentState() {
+        return currentState;
+    }
+
+    public void setCurrentState(State currentState) {
+        this.currentState = currentState;
+    }
+
+    public void init() {
         currentState = State.CLOSED;
     }
-    public static void openDoor () {
-        if (currentState == State.OPENING || currentState == State.CLOSED) {
-            currentState = State.OPENING;
-        }
-        if (currentState == State.CLOSING) {
-            currentState = State.ERROR;
-        }
+
+    public void openDoor() {
+        currentState = State.OPENED;
     }
-    public static void closeDoor () {
-        if (currentState == State.CLOSING || currentState == State.OPENED) {
-            currentState = State.CLOSING;
-        }
-        if (currentState == State.OPENING) {
-            currentState = State.ERROR;
-        }
+
+    public void closeDoor() {
+        currentState = State.CLOSED;
     }
-    public static void main(String[] args) {
+
+    public void main(String[] args) {
         init();
         openDoor();
         closeDoor();
